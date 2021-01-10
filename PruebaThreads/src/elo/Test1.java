@@ -6,6 +6,26 @@ import org.junit.jupiter.api.Test;
 class Test1 {
 
 	@Test
+	void test1CVSinDosis() {
+		CentroDeMonitoreo mc = new CentroDeMonitoreoBásico(); 
+		
+		CentroDeVacunacion CVOlavarria = new CentroDeVacunacion("Hospital Evita", "Olavarria", 1000);
+		
+		CVOlavarria.recibirVacunas(500);
+		CVOlavarria.comenzarAVacunar(mc);
+		
+		try {
+			Thread.sleep(1000);
+			while (CVOlavarria.estaVacunando)
+				Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		};
+
+		Assert.assertEquals(500, mc.getCantVacunadosHoy());
+	}
+	
+	@Test
 	void test1CVBasico() {
 		CentroDeMonitoreo mc = new CentroDeMonitoreoBásico(); 
 		

@@ -9,4 +9,9 @@ public abstract class CentroDeMonitoreo {
 	}
 
 	public abstract void repotarInoculacion();
+
+	public synchronized void repotarInoculacion(int cant) {
+		cantVacunadosHoy += cant;
+	}
+
 }
