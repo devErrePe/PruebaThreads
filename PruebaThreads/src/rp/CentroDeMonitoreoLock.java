@@ -1,4 +1,4 @@
-package elo;
+package rp;
 
 import java.util.concurrent.locks.ReentrantLock;
 

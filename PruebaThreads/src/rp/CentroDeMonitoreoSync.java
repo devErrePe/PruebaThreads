@@ -1,4 +1,4 @@
-package elo;
+package rp;
 
 public class CentroDeMonitoreoSync extends CentroDeMonitoreo {
 

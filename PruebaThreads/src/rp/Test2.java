@@ -1,6 +1,4 @@
-package elo;
-
-import static org.junit.jupiter.api.Assertions.*;
+package rp;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
